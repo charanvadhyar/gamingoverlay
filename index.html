@@ -18,17 +18,19 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: transparent;
+            background-image: url('banner.png'); /* Corrected */
+            background-size: 1000% 100%; /* Adjust to match the sprite sheet dimensions */
+            background-repeat: no-repeat;
             animation: playAnimation 1s steps(10) infinite;
         }
 
         @keyframes playAnimation {
             from { background-position: 0 0; }
-            to { background-position: -1000% 0; }
+            to { background-position: -1000% 0; } /* Moves through the sprite frames */
         }
     </style>
 </head>
 <body>
-    <div id="overlay" style="background-image: url('banner.png');"></div>
+    <div id="overlay"></div>
 </body>
 </html>
